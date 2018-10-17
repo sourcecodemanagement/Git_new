@@ -1,0 +1,15 @@
+*** Settings ***
+Library           SeleniumLibrary
+Resource          ../ReusableKeywords/ExcelOperationsForInput.txt
+
+*** Keywords ***
+Launch Application
+    Open Browser    ${URL}    gc
+    sleep    5s
+    Maximize Browser Window
+
+SearchTakenMovie
+    Wait Until Element Is Visible    ${NavigationBar}    6
+    Input Text    ${NavigationBar}    ${MovieName}
+    Wait Until Element Is Visible    ${GoButton}    6
+    Click Element    ${GoButton}

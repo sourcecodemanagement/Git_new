@@ -1,0 +1,1074 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20181009 14:17:30.950" generator="Robot 3.0.4 (Python 2.7.11 on win32)">
+<suite source="C:\Project\Pro_test" id="s1" name="Pro test">
+<suite source="C:\Project\Pro_test\Scripts" id="s1-s1" name="Scripts">
+<suite source="C:\Project\Pro_test\Scripts\Functionality1.txt" id="s1-s1-s1" name="Functionality1">
+<kw type="setup" name="Setup" library="ExcelOperationsForInput">
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${ScreenshotCounter}</arg>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20181009 14:17:31.805" level="INFO">${ScreenshotCounter} = 1</msg>
+<status status="PASS" endtime="20181009 14:17:31.805" starttime="20181009 14:17:31.805"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${Delimiter_Tilde}</arg>
+<arg>~</arg>
+</arguments>
+<msg timestamp="20181009 14:17:31.808" level="INFO">${Delimiter_Tilde} = ~</msg>
+<status status="PASS" endtime="20181009 14:17:31.808" starttime="20181009 14:17:31.805"></status>
+</kw>
+<kw name="Comment" library="BuiltIn">
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<arguments>
+<arg>Set Suite Variable</arg>
+<arg>${strLang}</arg>
+<arg>ENG</arg>
+</arguments>
+<status status="PASS" endtime="20181009 14:17:31.808" starttime="20181009 14:17:31.808"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>ENG</arg>
+</arguments>
+<assign>
+<var>${strLang}</var>
+</assign>
+<msg timestamp="20181009 14:17:31.810" level="INFO">${strLang} = ENG</msg>
+<status status="PASS" endtime="20181009 14:17:31.810" starttime="20181009 14:17:31.810"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${strLang}'=='ENG'</arg>
+<arg>Set Locator and Testdata File to ENG</arg>
+</arguments>
+<kw name="Set Locator and Testdata File to ENG" library="ExcelOperationsForInput">
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${LocatorSetupFilename}</arg>
+<arg>${LocatorSetupFilename_ENG}</arg>
+</arguments>
+<msg timestamp="20181009 14:17:31.813" level="INFO">${LocatorSetupFilename} = C:\Project\Pro_test\ReusableKeywords\Locators\ENG_Locators.xls</msg>
+<status status="PASS" endtime="20181009 14:17:31.813" starttime="20181009 14:17:31.813"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${testDataFilename}</arg>
+<arg>${testDataFilename_ENG}</arg>
+</arguments>
+<msg timestamp="20181009 14:17:31.813" level="INFO">${testDataFilename} = C:\Project\Pro_test\ReusableKeywords\TestData\ENG_Testdata.xls</msg>
+<status status="PASS" endtime="20181009 14:17:31.813" starttime="20181009 14:17:31.813"></status>
+</kw>
+<status status="PASS" endtime="20181009 14:17:31.815" starttime="20181009 14:17:31.810"></status>
+</kw>
+<status status="PASS" endtime="20181009 14:17:31.815" starttime="20181009 14:17:31.810"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${strLang}'=='OTHER'</arg>
+<arg>Set Locator and Testdata File to OTHER</arg>
+</arguments>
+<status status="PASS" endtime="20181009 14:17:31.815" starttime="20181009 14:17:31.815"></status>
+</kw>
+<kw name="Comment" library="BuiltIn">
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<arguments>
+<arg>${LocatorSetupFilename}</arg>
+</arguments>
+<status status="PASS" endtime="20181009 14:17:31.818" starttime="20181009 14:17:31.818"></status>
+</kw>
+<kw name="SetupTestDataFile" library="ExcelOperationsForInput">
+<arguments>
+<arg>${LocatorSetupFilename}</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${Filename}</arg>
+</arguments>
+<msg timestamp="20181009 14:17:31.820" level="INFO">C:\Project\Pro_test\ReusableKeywords\Locators\ENG_Locators.xls</msg>
+<status status="PASS" endtime="20181009 14:17:31.820" starttime="20181009 14:17:31.820"></status>
+</kw>
+<kw name="Open Excel" library="ExcelLibrary">
+<doc>Opens the Excel file from the path provided in the file name parameter.</doc>
+<arguments>
+<arg>${Filename}</arg>
+<arg>formatting_info=True</arg>
+</arguments>
+<status status="PASS" endtime="20181009 14:17:31.830" starttime="20181009 14:17:31.823"></status>
+</kw>
+<kw name="Comment" library="BuiltIn">
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<arguments>
+<arg>Log</arg>
+<arg>formatting_info=True</arg>
+</arguments>
+<status status="PASS" endtime="20181009 14:17:31.833" starttime="20181009 14:17:31.833"></status>
+</kw>
+<status status="PASS" endtime="20181009 14:17:31.833" starttime="20181009 14:17:31.818"></status>
+</kw>
+<kw name="Get Sheet Names" library="ExcelLibrary">
+<doc>Returns the names of all the worksheets in the current workbook.</doc>
+<assign>
+<var>@{Sheets}</var>
+</assign>
+<msg timestamp="20181009 14:17:31.835" level="INFO">@{Sheets} = [ Functionality1 ]</msg>
+<status status="PASS" endtime="20181009 14:17:31.835" starttime="20181009 14:17:31.835"></status>
+</kw>
+<kw type="for" name="${Sheet} IN [ @{Sheets} ]">
+<kw type="foritem" name="${Sheet} = Functionality1">
+<kw name="GetTestcaseData" library="ExcelOperationsForInput">
+<arguments>
+<arg>${Sheet}</arg>
+<arg>Element_Locators</arg>
+</arguments>
+<kw name="Get Row Count" library="ExcelLibrary">
+<doc>Returns the specific number of rows of the sheet name specified.</doc>
+<arguments>
+<arg>${sheetname}</arg>
+</arguments>
+<assign>
+<var>${rcount}</var>
+</assign>
+<msg timestamp="20181009 14:17:31.840" level="INFO">${rcount} = 2</msg>
+<status status="PASS" endtime="20181009 14:17:31.840" starttime="20181009 14:17:31.838"></status>
+</kw>
+<kw type="for" name="${row} IN RANGE [ 1 | ${rcount} ]">
+<kw type="foritem" name="${row} = 1">
+<kw name="Read Cell Data By Coordinates" library="ExcelLibrary">
+<doc>Uses the column and row to return the data from that cell.</doc>
+<arguments>
+<arg>${sheetname}</arg>
+<arg>0</arg>
+<arg>${row}</arg>
+</arguments>
+<assign>
+<var>${stname}</var>
+</assign>
+<msg timestamp="20181009 14:17:31.840" level="INFO">${stname} = Element_Locators</msg>
+<status status="PASS" endtime="20181009 14:17:31.843" starttime="20181009 14:17:31.840"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${stname}'=='${testcasename}'</arg>
+<arg>CreateScalar</arg>
+<arg>${row}</arg>
+<arg>${sheetname}</arg>
+</arguments>
+<kw name="CreateScalar" library="ExcelOperationsForInput">
+<arguments>
+<arg>${row}</arg>
+<arg>${sheetname}</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>row number is ${RowNo}</arg>
+</arguments>
+<msg timestamp="20181009 14:17:31.845" level="INFO">row number is 1</msg>
+<status status="PASS" endtime="20181009 14:17:31.845" starttime="20181009 14:17:31.843"></status>
+</kw>
+<kw name="Get Column Count" library="ExcelLibrary">
+<doc>Returns the specific number of columns of the sheet name specified.</doc>
+<arguments>
+<arg>${SheetName}</arg>
+</arguments>
+<assign>
+<var>${ColCount}</var>
+</assign>
+<msg timestamp="20181009 14:17:31.845" level="INFO">${ColCount} = 3</msg>
+<status status="PASS" endtime="20181009 14:17:31.845" starttime="20181009 14:17:31.845"></status>
+</kw>
+<kw type="for" name="${Column} IN RANGE [ 0 | ${ColCount} ]">
+<kw type="foritem" name="${Column} = 0">
+<kw name="Read Cell Data By Coordinates" library="ExcelLibrary">
+<doc>Uses the column and row to return the data from that cell.</doc>
+<arguments>
+<arg>${SheetName}</arg>
+<arg>${Column}</arg>
+<arg>0</arg>
+</arguments>
+<assign>
+<var>${ScalarName}</var>
+</assign>
+<msg timestamp="20181009 14:17:31.848" level="INFO">${ScalarName} = Locators</msg>
+<status status="PASS" endtime="20181009 14:17:31.848" starttime="20181009 14:17:31.848"></status>
+</kw>
+<kw name="Read Cell Data By Coordinates" library="ExcelLibrary">
+<doc>Uses the column and row to return the data from that cell.</doc>
+<arguments>
+<arg>${SheetName}</arg>
+<arg>${Column}</arg>
+<arg>${RowNo}</arg>
+</arguments>
+<assign>
+<var>${ScalarValue}</var>
+</assign>
+<msg timestamp="20181009 14:17:31.850" level="INFO">${ScalarValue} = Element_Locators</msg>
+<status status="PASS" endtime="20181009 14:17:31.850" starttime="20181009 14:17:31.850"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${${ScalarName}}</arg>
+<arg>${ScalarValue}</arg>
+</arguments>
+<msg timestamp="20181009 14:17:31.853" level="INFO">${Locators} = Element_Locators</msg>
+<status status="PASS" endtime="20181009 14:17:31.853" starttime="20181009 14:17:31.850"></status>
+</kw>
+<status status="PASS" endtime="20181009 14:17:31.853" starttime="20181009 14:17:31.848"></status>
+</kw>
+<kw type="foritem" name="${Column} = 1">
+<kw name="Read Cell Data By Coordinates" library="ExcelLibrary">
+<doc>Uses the column and row to return the data from that cell.</doc>
+<arguments>
+<arg>${SheetName}</arg>
+<arg>${Column}</arg>
+<arg>0</arg>
+</arguments>
+<assign>
+<var>${ScalarName}</var>
+</assign>
+<msg timestamp="20181009 14:17:31.855" level="INFO">${ScalarName} = NavigationBar</msg>
+<status status="PASS" endtime="20181009 14:17:31.855" starttime="20181009 14:17:31.853"></status>
+</kw>
+<kw name="Read Cell Data By Coordinates" library="ExcelLibrary">
+<doc>Uses the column and row to return the data from that cell.</doc>
+<arguments>
+<arg>${SheetName}</arg>
+<arg>${Column}</arg>
+<arg>${RowNo}</arg>
+</arguments>
+<assign>
+<var>${ScalarValue}</var>
+</assign>
+<msg timestamp="20181009 14:17:31.855" level="INFO">${ScalarValue} = //*[@id="navbar-query"]</msg>
+<status status="PASS" endtime="20181009 14:17:31.855" starttime="20181009 14:17:31.855"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${${ScalarName}}</arg>
+<arg>${ScalarValue}</arg>
+</arguments>
+<msg timestamp="20181009 14:17:31.858" level="INFO">${NavigationBar} = //*[@id="navbar-query"]</msg>
+<status status="PASS" endtime="20181009 14:17:31.858" starttime="20181009 14:17:31.858"></status>
+</kw>
+<status status="PASS" endtime="20181009 14:17:31.858" starttime="20181009 14:17:31.853"></status>
+</kw>
+<kw type="foritem" name="${Column} = 2">
+<kw name="Read Cell Data By Coordinates" library="ExcelLibrary">
+<doc>Uses the column and row to return the data from that cell.</doc>
+<arguments>
+<arg>${SheetName}</arg>
+<arg>${Column}</arg>
+<arg>0</arg>
+</arguments>
+<assign>
+<var>${ScalarName}</var>
+</assign>
+<msg timestamp="20181009 14:17:31.860" level="INFO">${ScalarName} = GoButton</msg>
+<status status="PASS" endtime="20181009 14:17:31.860" starttime="20181009 14:17:31.860"></status>
+</kw>
+<kw name="Read Cell Data By Coordinates" library="ExcelLibrary">
+<doc>Uses the column and row to return the data from that cell.</doc>
+<arguments>
+<arg>${SheetName}</arg>
+<arg>${Column}</arg>
+<arg>${RowNo}</arg>
+</arguments>
+<assign>
+<var>${ScalarValue}</var>
+</assign>
+<msg timestamp="20181009 14:17:31.863" level="INFO">${ScalarValue} = //*[@class="magnifyingglass navbarSprite"]</msg>
+<status status="PASS" endtime="20181009 14:17:31.863" starttime="20181009 14:17:31.860"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${${ScalarName}}</arg>
+<arg>${ScalarValue}</arg>
+</arguments>
+<msg timestamp="20181009 14:17:31.865" level="INFO">${GoButton} = //*[@class="magnifyingglass navbarSprite"]</msg>
+<status status="PASS" endtime="20181009 14:17:31.865" starttime="20181009 14:17:31.863"></status>
+</kw>
+<status status="PASS" endtime="20181009 14:17:31.865" starttime="20181009 14:17:31.858"></status>
+</kw>
+<status status="PASS" endtime="20181009 14:17:31.865" starttime="20181009 14:17:31.848"></status>
+</kw>
+<status status="PASS" endtime="20181009 14:17:31.868" starttime="20181009 14:17:31.843"></status>
+</kw>
+<status status="PASS" endtime="20181009 14:17:31.868" starttime="20181009 14:17:31.843"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${stname}'=='${testcasename}'</arg>
+<arg>Exit For Loop</arg>
+</arguments>
+<kw name="Exit For Loop" library="BuiltIn">
+<doc>Stops executing the enclosing for loop.</doc>
+<msg timestamp="20181009 14:17:31.868" level="INFO">Exiting for loop altogether.</msg>
+<status status="PASS" endtime="20181009 14:17:31.870" starttime="20181009 14:17:31.868"></status>
+</kw>
+<status status="PASS" endtime="20181009 14:17:31.870" starttime="20181009 14:17:31.868"></status>
+</kw>
+<status status="PASS" endtime="20181009 14:17:31.870" starttime="20181009 14:17:31.840"></status>
+</kw>
+<status status="PASS" endtime="20181009 14:17:31.870" starttime="20181009 14:17:31.840"></status>
+</kw>
+<status status="PASS" endtime="20181009 14:17:31.870" starttime="20181009 14:17:31.838"></status>
+</kw>
+<status status="PASS" endtime="20181009 14:17:31.870" starttime="20181009 14:17:31.835"></status>
+</kw>
+<status status="PASS" endtime="20181009 14:17:31.870" starttime="20181009 14:17:31.835"></status>
+</kw>
+<status status="PASS" endtime="20181009 14:17:31.870" starttime="20181009 14:17:31.803"></status>
+</kw>
+<test id="s1-s1-s1-t1" name="Test1">
+<kw type="setup" name="Setup" library="ExcelOperationsForInput">
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${ScreenshotCounter}</arg>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20181009 14:17:31.875" level="INFO">${ScreenshotCounter} = 1</msg>
+<status status="PASS" endtime="20181009 14:17:31.875" starttime="20181009 14:17:31.875"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${Delimiter_Tilde}</arg>
+<arg>~</arg>
+</arguments>
+<msg timestamp="20181009 14:17:31.878" level="INFO">${Delimiter_Tilde} = ~</msg>
+<status status="PASS" endtime="20181009 14:17:31.878" starttime="20181009 14:17:31.875"></status>
+</kw>
+<kw name="Comment" library="BuiltIn">
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<arguments>
+<arg>Set Suite Variable</arg>
+<arg>${strLang}</arg>
+<arg>ENG</arg>
+</arguments>
+<status status="PASS" endtime="20181009 14:17:31.878" starttime="20181009 14:17:31.878"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>ENG</arg>
+</arguments>
+<assign>
+<var>${strLang}</var>
+</assign>
+<msg timestamp="20181009 14:17:31.880" level="INFO">${strLang} = ENG</msg>
+<status status="PASS" endtime="20181009 14:17:31.880" starttime="20181009 14:17:31.878"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${strLang}'=='ENG'</arg>
+<arg>Set Locator and Testdata File to ENG</arg>
+</arguments>
+<kw name="Set Locator and Testdata File to ENG" library="ExcelOperationsForInput">
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${LocatorSetupFilename}</arg>
+<arg>${LocatorSetupFilename_ENG}</arg>
+</arguments>
+<msg timestamp="20181009 14:17:31.883" level="INFO">${LocatorSetupFilename} = C:\Project\Pro_test\ReusableKeywords\Locators\ENG_Locators.xls</msg>
+<status status="PASS" endtime="20181009 14:17:31.883" starttime="20181009 14:17:31.880"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${testDataFilename}</arg>
+<arg>${testDataFilename_ENG}</arg>
+</arguments>
+<msg timestamp="20181009 14:17:31.883" level="INFO">${testDataFilename} = C:\Project\Pro_test\ReusableKeywords\TestData\ENG_Testdata.xls</msg>
+<status status="PASS" endtime="20181009 14:17:31.885" starttime="20181009 14:17:31.883"></status>
+</kw>
+<status status="PASS" endtime="20181009 14:17:31.885" starttime="20181009 14:17:31.880"></status>
+</kw>
+<status status="PASS" endtime="20181009 14:17:31.885" starttime="20181009 14:17:31.880"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${strLang}'=='OTHER'</arg>
+<arg>Set Locator and Testdata File to OTHER</arg>
+</arguments>
+<status status="PASS" endtime="20181009 14:17:31.885" starttime="20181009 14:17:31.885"></status>
+</kw>
+<kw name="Comment" library="BuiltIn">
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<arguments>
+<arg>${LocatorSetupFilename}</arg>
+</arguments>
+<status status="PASS" endtime="20181009 14:17:31.888" starttime="20181009 14:17:31.885"></status>
+</kw>
+<kw name="SetupTestDataFile" library="ExcelOperationsForInput">
+<arguments>
+<arg>${LocatorSetupFilename}</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${Filename}</arg>
+</arguments>
+<msg timestamp="20181009 14:17:31.888" level="INFO">C:\Project\Pro_test\ReusableKeywords\Locators\ENG_Locators.xls</msg>
+<status status="PASS" endtime="20181009 14:17:31.888" starttime="20181009 14:17:31.888"></status>
+</kw>
+<kw name="Open Excel" library="ExcelLibrary">
+<doc>Opens the Excel file from the path provided in the file name parameter.</doc>
+<arguments>
+<arg>${Filename}</arg>
+<arg>formatting_info=True</arg>
+</arguments>
+<status status="PASS" endtime="20181009 14:17:31.895" starttime="20181009 14:17:31.890"></status>
+</kw>
+<kw name="Comment" library="BuiltIn">
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<arguments>
+<arg>Log</arg>
+<arg>formatting_info=True</arg>
+</arguments>
+<status status="PASS" endtime="20181009 14:17:31.898" starttime="20181009 14:17:31.895"></status>
+</kw>
+<status status="PASS" endtime="20181009 14:17:31.898" starttime="20181009 14:17:31.888"></status>
+</kw>
+<kw name="Get Sheet Names" library="ExcelLibrary">
+<doc>Returns the names of all the worksheets in the current workbook.</doc>
+<assign>
+<var>@{Sheets}</var>
+</assign>
+<msg timestamp="20181009 14:17:31.898" level="INFO">@{Sheets} = [ Functionality1 ]</msg>
+<status status="PASS" endtime="20181009 14:17:31.898" starttime="20181009 14:17:31.898"></status>
+</kw>
+<kw type="for" name="${Sheet} IN [ @{Sheets} ]">
+<kw type="foritem" name="${Sheet} = Functionality1">
+<kw name="GetTestcaseData" library="ExcelOperationsForInput">
+<arguments>
+<arg>${Sheet}</arg>
+<arg>Element_Locators</arg>
+</arguments>
+<kw name="Get Row Count" library="ExcelLibrary">
+<doc>Returns the specific number of rows of the sheet name specified.</doc>
+<arguments>
+<arg>${sheetname}</arg>
+</arguments>
+<assign>
+<var>${rcount}</var>
+</assign>
+<msg timestamp="20181009 14:17:31.900" level="INFO">${rcount} = 2</msg>
+<status status="PASS" endtime="20181009 14:17:31.903" starttime="20181009 14:17:31.900"></status>
+</kw>
+<kw type="for" name="${row} IN RANGE [ 1 | ${rcount} ]">
+<kw type="foritem" name="${row} = 1">
+<kw name="Read Cell Data By Coordinates" library="ExcelLibrary">
+<doc>Uses the column and row to return the data from that cell.</doc>
+<arguments>
+<arg>${sheetname}</arg>
+<arg>0</arg>
+<arg>${row}</arg>
+</arguments>
+<assign>
+<var>${stname}</var>
+</assign>
+<msg timestamp="20181009 14:17:31.903" level="INFO">${stname} = Element_Locators</msg>
+<status status="PASS" endtime="20181009 14:17:31.903" starttime="20181009 14:17:31.903"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${stname}'=='${testcasename}'</arg>
+<arg>CreateScalar</arg>
+<arg>${row}</arg>
+<arg>${sheetname}</arg>
+</arguments>
+<kw name="CreateScalar" library="ExcelOperationsForInput">
+<arguments>
+<arg>${row}</arg>
+<arg>${sheetname}</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>row number is ${RowNo}</arg>
+</arguments>
+<msg timestamp="20181009 14:17:31.905" level="INFO">row number is 1</msg>
+<status status="PASS" endtime="20181009 14:17:31.905" starttime="20181009 14:17:31.905"></status>
+</kw>
+<kw name="Get Column Count" library="ExcelLibrary">
+<doc>Returns the specific number of columns of the sheet name specified.</doc>
+<arguments>
+<arg>${SheetName}</arg>
+</arguments>
+<assign>
+<var>${ColCount}</var>
+</assign>
+<msg timestamp="20181009 14:17:31.908" level="INFO">${ColCount} = 3</msg>
+<status status="PASS" endtime="20181009 14:17:31.908" starttime="20181009 14:17:31.908"></status>
+</kw>
+<kw type="for" name="${Column} IN RANGE [ 0 | ${ColCount} ]">
+<kw type="foritem" name="${Column} = 0">
+<kw name="Read Cell Data By Coordinates" library="ExcelLibrary">
+<doc>Uses the column and row to return the data from that cell.</doc>
+<arguments>
+<arg>${SheetName}</arg>
+<arg>${Column}</arg>
+<arg>0</arg>
+</arguments>
+<assign>
+<var>${ScalarName}</var>
+</assign>
+<msg timestamp="20181009 14:17:31.910" level="INFO">${ScalarName} = Locators</msg>
+<status status="PASS" endtime="20181009 14:17:31.910" starttime="20181009 14:17:31.908"></status>
+</kw>
+<kw name="Read Cell Data By Coordinates" library="ExcelLibrary">
+<doc>Uses the column and row to return the data from that cell.</doc>
+<arguments>
+<arg>${SheetName}</arg>
+<arg>${Column}</arg>
+<arg>${RowNo}</arg>
+</arguments>
+<assign>
+<var>${ScalarValue}</var>
+</assign>
+<msg timestamp="20181009 14:17:31.913" level="INFO">${ScalarValue} = Element_Locators</msg>
+<status status="PASS" endtime="20181009 14:17:31.913" starttime="20181009 14:17:31.910"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${${ScalarName}}</arg>
+<arg>${ScalarValue}</arg>
+</arguments>
+<msg timestamp="20181009 14:17:31.913" level="INFO">${Locators} = Element_Locators</msg>
+<status status="PASS" endtime="20181009 14:17:31.913" starttime="20181009 14:17:31.913"></status>
+</kw>
+<status status="PASS" endtime="20181009 14:17:31.913" starttime="20181009 14:17:31.908"></status>
+</kw>
+<kw type="foritem" name="${Column} = 1">
+<kw name="Read Cell Data By Coordinates" library="ExcelLibrary">
+<doc>Uses the column and row to return the data from that cell.</doc>
+<arguments>
+<arg>${SheetName}</arg>
+<arg>${Column}</arg>
+<arg>0</arg>
+</arguments>
+<assign>
+<var>${ScalarName}</var>
+</assign>
+<msg timestamp="20181009 14:17:31.915" level="INFO">${ScalarName} = NavigationBar</msg>
+<status status="PASS" endtime="20181009 14:17:31.915" starttime="20181009 14:17:31.915"></status>
+</kw>
+<kw name="Read Cell Data By Coordinates" library="ExcelLibrary">
+<doc>Uses the column and row to return the data from that cell.</doc>
+<arguments>
+<arg>${SheetName}</arg>
+<arg>${Column}</arg>
+<arg>${RowNo}</arg>
+</arguments>
+<assign>
+<var>${ScalarValue}</var>
+</assign>
+<msg timestamp="20181009 14:17:31.918" level="INFO">${ScalarValue} = //*[@id="navbar-query"]</msg>
+<status status="PASS" endtime="20181009 14:17:31.918" starttime="20181009 14:17:31.915"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${${ScalarName}}</arg>
+<arg>${ScalarValue}</arg>
+</arguments>
+<msg timestamp="20181009 14:17:31.918" level="INFO">${NavigationBar} = //*[@id="navbar-query"]</msg>
+<status status="PASS" endtime="20181009 14:17:31.920" starttime="20181009 14:17:31.918"></status>
+</kw>
+<status status="PASS" endtime="20181009 14:17:31.920" starttime="20181009 14:17:31.913"></status>
+</kw>
+<kw type="foritem" name="${Column} = 2">
+<kw name="Read Cell Data By Coordinates" library="ExcelLibrary">
+<doc>Uses the column and row to return the data from that cell.</doc>
+<arguments>
+<arg>${SheetName}</arg>
+<arg>${Column}</arg>
+<arg>0</arg>
+</arguments>
+<assign>
+<var>${ScalarName}</var>
+</assign>
+<msg timestamp="20181009 14:17:31.920" level="INFO">${ScalarName} = GoButton</msg>
+<status status="PASS" endtime="20181009 14:17:31.920" starttime="20181009 14:17:31.920"></status>
+</kw>
+<kw name="Read Cell Data By Coordinates" library="ExcelLibrary">
+<doc>Uses the column and row to return the data from that cell.</doc>
+<arguments>
+<arg>${SheetName}</arg>
+<arg>${Column}</arg>
+<arg>${RowNo}</arg>
+</arguments>
+<assign>
+<var>${ScalarValue}</var>
+</assign>
+<msg timestamp="20181009 14:17:31.923" level="INFO">${ScalarValue} = //*[@class="magnifyingglass navbarSprite"]</msg>
+<status status="PASS" endtime="20181009 14:17:31.923" starttime="20181009 14:17:31.920"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${${ScalarName}}</arg>
+<arg>${ScalarValue}</arg>
+</arguments>
+<msg timestamp="20181009 14:17:31.923" level="INFO">${GoButton} = //*[@class="magnifyingglass navbarSprite"]</msg>
+<status status="PASS" endtime="20181009 14:17:31.923" starttime="20181009 14:17:31.923"></status>
+</kw>
+<status status="PASS" endtime="20181009 14:17:31.925" starttime="20181009 14:17:31.920"></status>
+</kw>
+<status status="PASS" endtime="20181009 14:17:31.925" starttime="20181009 14:17:31.908"></status>
+</kw>
+<status status="PASS" endtime="20181009 14:17:31.925" starttime="20181009 14:17:31.905"></status>
+</kw>
+<status status="PASS" endtime="20181009 14:17:31.925" starttime="20181009 14:17:31.905"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${stname}'=='${testcasename}'</arg>
+<arg>Exit For Loop</arg>
+</arguments>
+<kw name="Exit For Loop" library="BuiltIn">
+<doc>Stops executing the enclosing for loop.</doc>
+<msg timestamp="20181009 14:17:31.928" level="INFO">Exiting for loop altogether.</msg>
+<status status="PASS" endtime="20181009 14:17:31.928" starttime="20181009 14:17:31.928"></status>
+</kw>
+<status status="PASS" endtime="20181009 14:17:31.928" starttime="20181009 14:17:31.925"></status>
+</kw>
+<status status="PASS" endtime="20181009 14:17:31.928" starttime="20181009 14:17:31.903"></status>
+</kw>
+<status status="PASS" endtime="20181009 14:17:31.928" starttime="20181009 14:17:31.903"></status>
+</kw>
+<status status="PASS" endtime="20181009 14:17:31.930" starttime="20181009 14:17:31.900"></status>
+</kw>
+<status status="PASS" endtime="20181009 14:17:31.930" starttime="20181009 14:17:31.900"></status>
+</kw>
+<status status="PASS" endtime="20181009 14:17:31.930" starttime="20181009 14:17:31.898"></status>
+</kw>
+<status status="PASS" endtime="20181009 14:17:31.930" starttime="20181009 14:17:31.873"></status>
+</kw>
+<kw name="Run Keywords" library="BuiltIn">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>GetSuiteNM</arg>
+<arg>AND</arg>
+<arg>CreateScalarTestData</arg>
+<arg>${SuiteNM}</arg>
+<arg>${TEST_NAME}</arg>
+</arguments>
+<kw name="GetSuiteNM" library="ExcelOperationsForInput">
+<kw name="Split String" library="String">
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<arguments>
+<arg>${SUITE_NAME}</arg>
+<arg>.</arg>
+</arguments>
+<assign>
+<var>@{SuiteName}</var>
+</assign>
+<msg timestamp="20181009 14:17:31.933" level="INFO">@{SuiteName} = [ Pro test | Scripts | Functionality1 ]</msg>
+<status status="PASS" endtime="20181009 14:17:31.933" starttime="20181009 14:17:31.933"></status>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${SuiteName}</arg>
+</arguments>
+<assign>
+<var>${ListLength}</var>
+</assign>
+<msg timestamp="20181009 14:17:31.933" level="INFO">Length is 3</msg>
+<msg timestamp="20181009 14:17:31.935" level="INFO">${ListLength} = 3</msg>
+<status status="PASS" endtime="20181009 14:17:31.935" starttime="20181009 14:17:31.933"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${ListLength}-1</arg>
+</arguments>
+<assign>
+<var>${Index}</var>
+</assign>
+<msg timestamp="20181009 14:17:31.935" level="INFO">${Index} = 2</msg>
+<status status="PASS" endtime="20181009 14:17:31.935" starttime="20181009 14:17:31.935"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${SuiteNM}</arg>
+<arg>@{SuiteName}[${Index}]</arg>
+</arguments>
+<msg timestamp="20181009 14:17:31.938" level="INFO">${SuiteNM} = Functionality1</msg>
+<status status="PASS" endtime="20181009 14:17:31.938" starttime="20181009 14:17:31.935"></status>
+</kw>
+<status status="PASS" endtime="20181009 14:17:31.938" starttime="20181009 14:17:31.930"></status>
+</kw>
+<kw name="CreateScalarTestData" library="ExcelOperationsForInput">
+<arguments>
+<arg>${SuiteNM}</arg>
+<arg>${TEST_NAME}</arg>
+</arguments>
+<kw name="Comment" library="BuiltIn">
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<arguments>
+<arg>${testDataFilename_ENG}</arg>
+</arguments>
+<status status="PASS" endtime="20181009 14:17:31.940" starttime="20181009 14:17:31.940"></status>
+</kw>
+<kw name="SetupTestDataFile" library="ExcelOperationsForInput">
+<arguments>
+<arg>${testDataFilename}</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${Filename}</arg>
+</arguments>
+<msg timestamp="20181009 14:17:31.943" level="INFO">C:\Project\Pro_test\ReusableKeywords\TestData\ENG_Testdata.xls</msg>
+<status status="PASS" endtime="20181009 14:17:31.943" starttime="20181009 14:17:31.943"></status>
+</kw>
+<kw name="Open Excel" library="ExcelLibrary">
+<doc>Opens the Excel file from the path provided in the file name parameter.</doc>
+<arguments>
+<arg>${Filename}</arg>
+<arg>formatting_info=True</arg>
+</arguments>
+<status status="PASS" endtime="20181009 14:17:31.950" starttime="20181009 14:17:31.943"></status>
+</kw>
+<kw name="Comment" library="BuiltIn">
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<arguments>
+<arg>Log</arg>
+<arg>formatting_info=True</arg>
+</arguments>
+<status status="PASS" endtime="20181009 14:17:31.953" starttime="20181009 14:17:31.953"></status>
+</kw>
+<status status="PASS" endtime="20181009 14:17:31.953" starttime="20181009 14:17:31.940"></status>
+</kw>
+<kw name="GetTestcaseData" library="ExcelOperationsForInput">
+<arguments>
+<arg>${SuiteNM}</arg>
+<arg>${TestNM}</arg>
+</arguments>
+<kw name="Get Row Count" library="ExcelLibrary">
+<doc>Returns the specific number of rows of the sheet name specified.</doc>
+<arguments>
+<arg>${sheetname}</arg>
+</arguments>
+<assign>
+<var>${rcount}</var>
+</assign>
+<msg timestamp="20181009 14:17:31.955" level="INFO">${rcount} = 2</msg>
+<status status="PASS" endtime="20181009 14:17:31.955" starttime="20181009 14:17:31.953"></status>
+</kw>
+<kw type="for" name="${row} IN RANGE [ 1 | ${rcount} ]">
+<kw type="foritem" name="${row} = 1">
+<kw name="Read Cell Data By Coordinates" library="ExcelLibrary">
+<doc>Uses the column and row to return the data from that cell.</doc>
+<arguments>
+<arg>${sheetname}</arg>
+<arg>0</arg>
+<arg>${row}</arg>
+</arguments>
+<assign>
+<var>${stname}</var>
+</assign>
+<msg timestamp="20181009 14:17:31.958" level="INFO">${stname} = Test1</msg>
+<status status="PASS" endtime="20181009 14:17:31.958" starttime="20181009 14:17:31.958"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${stname}'=='${testcasename}'</arg>
+<arg>CreateScalar</arg>
+<arg>${row}</arg>
+<arg>${sheetname}</arg>
+</arguments>
+<kw name="CreateScalar" library="ExcelOperationsForInput">
+<arguments>
+<arg>${row}</arg>
+<arg>${sheetname}</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>row number is ${RowNo}</arg>
+</arguments>
+<msg timestamp="20181009 14:17:31.960" level="INFO">row number is 1</msg>
+<status status="PASS" endtime="20181009 14:17:31.960" starttime="20181009 14:17:31.960"></status>
+</kw>
+<kw name="Get Column Count" library="ExcelLibrary">
+<doc>Returns the specific number of columns of the sheet name specified.</doc>
+<arguments>
+<arg>${SheetName}</arg>
+</arguments>
+<assign>
+<var>${ColCount}</var>
+</assign>
+<msg timestamp="20181009 14:17:31.963" level="INFO">${ColCount} = 3</msg>
+<status status="PASS" endtime="20181009 14:17:31.963" starttime="20181009 14:17:31.960"></status>
+</kw>
+<kw type="for" name="${Column} IN RANGE [ 0 | ${ColCount} ]">
+<kw type="foritem" name="${Column} = 0">
+<kw name="Read Cell Data By Coordinates" library="ExcelLibrary">
+<doc>Uses the column and row to return the data from that cell.</doc>
+<arguments>
+<arg>${SheetName}</arg>
+<arg>${Column}</arg>
+<arg>0</arg>
+</arguments>
+<assign>
+<var>${ScalarName}</var>
+</assign>
+<msg timestamp="20181009 14:17:31.965" level="INFO">${ScalarName} = TestCaseName</msg>
+<status status="PASS" endtime="20181009 14:17:31.965" starttime="20181009 14:17:31.963"></status>
+</kw>
+<kw name="Read Cell Data By Coordinates" library="ExcelLibrary">
+<doc>Uses the column and row to return the data from that cell.</doc>
+<arguments>
+<arg>${SheetName}</arg>
+<arg>${Column}</arg>
+<arg>${RowNo}</arg>
+</arguments>
+<assign>
+<var>${ScalarValue}</var>
+</assign>
+<msg timestamp="20181009 14:17:31.965" level="INFO">${ScalarValue} = Test1</msg>
+<status status="PASS" endtime="20181009 14:17:31.965" starttime="20181009 14:17:31.965"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${${ScalarName}}</arg>
+<arg>${ScalarValue}</arg>
+</arguments>
+<msg timestamp="20181009 14:17:31.968" level="INFO">${TestCaseName} = Test1</msg>
+<status status="PASS" endtime="20181009 14:17:31.968" starttime="20181009 14:17:31.965"></status>
+</kw>
+<status status="PASS" endtime="20181009 14:17:31.968" starttime="20181009 14:17:31.963"></status>
+</kw>
+<kw type="foritem" name="${Column} = 1">
+<kw name="Read Cell Data By Coordinates" library="ExcelLibrary">
+<doc>Uses the column and row to return the data from that cell.</doc>
+<arguments>
+<arg>${SheetName}</arg>
+<arg>${Column}</arg>
+<arg>0</arg>
+</arguments>
+<assign>
+<var>${ScalarName}</var>
+</assign>
+<msg timestamp="20181009 14:17:31.970" level="INFO">${ScalarName} = URL</msg>
+<status status="PASS" endtime="20181009 14:17:31.970" starttime="20181009 14:17:31.970"></status>
+</kw>
+<kw name="Read Cell Data By Coordinates" library="ExcelLibrary">
+<doc>Uses the column and row to return the data from that cell.</doc>
+<arguments>
+<arg>${SheetName}</arg>
+<arg>${Column}</arg>
+<arg>${RowNo}</arg>
+</arguments>
+<assign>
+<var>${ScalarValue}</var>
+</assign>
+<msg timestamp="20181009 14:17:31.970" level="INFO">${ScalarValue} = https://www.imdb.com/</msg>
+<status status="PASS" endtime="20181009 14:17:31.973" starttime="20181009 14:17:31.970"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${${ScalarName}}</arg>
+<arg>${ScalarValue}</arg>
+</arguments>
+<msg timestamp="20181009 14:17:31.975" level="INFO">${URL} = https://www.imdb.com/</msg>
+<status status="PASS" endtime="20181009 14:17:31.975" starttime="20181009 14:17:31.973"></status>
+</kw>
+<status status="PASS" endtime="20181009 14:17:31.975" starttime="20181009 14:17:31.968"></status>
+</kw>
+<kw type="foritem" name="${Column} = 2">
+<kw name="Read Cell Data By Coordinates" library="ExcelLibrary">
+<doc>Uses the column and row to return the data from that cell.</doc>
+<arguments>
+<arg>${SheetName}</arg>
+<arg>${Column}</arg>
+<arg>0</arg>
+</arguments>
+<assign>
+<var>${ScalarName}</var>
+</assign>
+<msg timestamp="20181009 14:17:31.978" level="INFO">${ScalarName} = MovieName</msg>
+<status status="PASS" endtime="20181009 14:17:31.978" starttime="20181009 14:17:31.975"></status>
+</kw>
+<kw name="Read Cell Data By Coordinates" library="ExcelLibrary">
+<doc>Uses the column and row to return the data from that cell.</doc>
+<arguments>
+<arg>${SheetName}</arg>
+<arg>${Column}</arg>
+<arg>${RowNo}</arg>
+</arguments>
+<assign>
+<var>${ScalarValue}</var>
+</assign>
+<msg timestamp="20181009 14:17:31.978" level="INFO">${ScalarValue} = taken</msg>
+<status status="PASS" endtime="20181009 14:17:31.978" starttime="20181009 14:17:31.978"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${${ScalarName}}</arg>
+<arg>${ScalarValue}</arg>
+</arguments>
+<msg timestamp="20181009 14:17:31.980" level="INFO">${MovieName} = taken</msg>
+<status status="PASS" endtime="20181009 14:17:31.980" starttime="20181009 14:17:31.978"></status>
+</kw>
+<status status="PASS" endtime="20181009 14:17:31.980" starttime="20181009 14:17:31.975"></status>
+</kw>
+<status status="PASS" endtime="20181009 14:17:31.980" starttime="20181009 14:17:31.963"></status>
+</kw>
+<status status="PASS" endtime="20181009 14:17:31.983" starttime="20181009 14:17:31.960"></status>
+</kw>
+<status status="PASS" endtime="20181009 14:17:31.983" starttime="20181009 14:17:31.958"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${stname}'=='${testcasename}'</arg>
+<arg>Exit For Loop</arg>
+</arguments>
+<kw name="Exit For Loop" library="BuiltIn">
+<doc>Stops executing the enclosing for loop.</doc>
+<msg timestamp="20181009 14:17:31.985" level="INFO">Exiting for loop altogether.</msg>
+<status status="PASS" endtime="20181009 14:17:31.985" starttime="20181009 14:17:31.983"></status>
+</kw>
+<status status="PASS" endtime="20181009 14:17:31.985" starttime="20181009 14:17:31.983"></status>
+</kw>
+<status status="PASS" endtime="20181009 14:17:31.985" starttime="20181009 14:17:31.955"></status>
+</kw>
+<status status="PASS" endtime="20181009 14:17:31.985" starttime="20181009 14:17:31.955"></status>
+</kw>
+<status status="PASS" endtime="20181009 14:17:31.985" starttime="20181009 14:17:31.953"></status>
+</kw>
+<kw name="Comment" library="BuiltIn">
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<arguments>
+<arg>${TestNM}</arg>
+</arguments>
+<status status="PASS" endtime="20181009 14:17:31.988" starttime="20181009 14:17:31.988"></status>
+</kw>
+<status status="PASS" endtime="20181009 14:17:31.988" starttime="20181009 14:17:31.938"></status>
+</kw>
+<status status="PASS" endtime="20181009 14:17:31.988" starttime="20181009 14:17:31.930"></status>
+</kw>
+<kw name="Comment" library="BuiltIn">
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<arguments>
+<arg>Launch Application</arg>
+</arguments>
+<status status="PASS" endtime="20181009 14:17:31.988" starttime="20181009 14:17:31.988"></status>
+</kw>
+<kw name="Comment" library="BuiltIn">
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<arguments>
+<arg>SearchTakenMovie</arg>
+</arguments>
+<status status="PASS" endtime="20181009 14:17:31.990" starttime="20181009 14:17:31.990"></status>
+</kw>
+<kw name="Run Keywords" library="BuiltIn">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>Launch Application</arg>
+<arg>AND</arg>
+<arg>SearchTakenMovie</arg>
+</arguments>
+<kw name="Launch Application" library="Resource1">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>gc</arg>
+</arguments>
+<msg timestamp="20181009 14:17:31.993" level="INFO">Opening browser 'gc' to base url 'https://www.imdb.com/'.</msg>
+<status status="PASS" endtime="20181009 14:17:35.808" starttime="20181009 14:17:31.990"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20181009 14:17:40.810" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20181009 14:17:40.810" starttime="20181009 14:17:35.808"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20181009 14:17:42.590" starttime="20181009 14:17:40.810"></status>
+</kw>
+<status status="PASS" endtime="20181009 14:17:42.590" starttime="20181009 14:17:31.990"></status>
+</kw>
+<kw name="SearchTakenMovie" library="Resource1">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${NavigationBar}</arg>
+<arg>6</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20181009 14:17:49.323" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20181009 14:17:49.323" starttime="20181009 14:17:48.670"></status>
+</kw>
+<msg timestamp="20181009 14:17:49.328" level="FAIL">Element '//*[@id="navbar-query"]' not visible after 6 seconds.</msg>
+<status status="FAIL" endtime="20181009 14:17:49.328" starttime="20181009 14:17:42.593"></status>
+</kw>
+<status status="FAIL" endtime="20181009 14:17:49.328" starttime="20181009 14:17:42.590"></status>
+</kw>
+<status status="FAIL" endtime="20181009 14:17:49.328" starttime="20181009 14:17:31.990"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20181009 14:17:52.730" starttime="20181009 14:17:49.330"></status>
+</kw>
+<status status="FAIL" endtime="20181009 14:17:52.730" critical="yes" starttime="20181009 14:17:31.873">Element '//*[@id="navbar-query"]' not visible after 6 seconds.</status>
+</test>
+<status status="FAIL" endtime="20181009 14:17:52.733" starttime="20181009 14:17:31.793"></status>
+</suite>
+<status status="FAIL" endtime="20181009 14:17:52.738" starttime="20181009 14:17:31.065"></status>
+</suite>
+<status status="FAIL" endtime="20181009 14:17:52.743" starttime="20181009 14:17:31.008"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="Pro test" pass="0">Pro test</stat>
+<stat fail="1" id="s1-s1" name="Scripts" pass="0">Pro test.Scripts</stat>
+<stat fail="1" id="s1-s1-s1" name="Functionality1" pass="0">Pro test.Scripts.Functionality1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

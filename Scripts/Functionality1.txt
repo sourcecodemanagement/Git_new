@@ -1,0 +1,18 @@
+*** Settings ***
+Suite Setup       Setup
+Test Teardown
+Resource          ../UserDefinedKeywords/Resource1.txt
+Resource          ../ReusableKeywords/ExcelOperationsForInput.txt
+
+*** Test Cases ***
+Test1
+    [Setup]   Setup
+    #Launch            URL
+    #Loading Test Data
+    Runkeywords   GetSuiteNM
+    ...    AND    CreateScalarTestData    ${SuiteNM}    ${TEST_NAME}
+    Comment    Launch Application
+    Comment    SearchTakenMovie
+    Runkeywords    Launch Application
+    ...    AND    SearchTakenMovie
+    [Teardown]    CloseBrowser

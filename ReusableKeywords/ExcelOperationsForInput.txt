@@ -1,0 +1,77 @@
+*** Settings ***
+Library           Collections
+Library           C:/Python27/Lib/site-packages/ExcelLibrary/ExcelLibrary.py
+Library           Dialogs
+Library           BuiltIn
+Library           XML
+Library           DateTime
+Library           String
+
+*** Variables ***
+${testDataFilename}    ${EMPTY}
+${Testdata_Sheet}    Testdata
+${LocatorSetupFilename}    ${EMPTY}
+${testDataFilename_ENG}    ${CURDIR}\\TestData\\ENG_Testdata.xls    # Holds the English test data file path
+${testDataFilename_OTHER}    ${CURDIR}\\..\\..\\..\\OTHER_Testdata.xlsx    #Holds the other language test data file path
+${LocatorSetupFilename_ENG}    ${CURDIR}\\Locators\\ENG_Locators.xls    #Holds the English locator file path
+${LocatorSetupFilename_OTHER}    ${CURDIR}\\..\\..\\..\\OTHER_Locators.xlsx    #Holds the other language locator file path
+${Testdata_Sheet2}    Testdata2
+
+*** Keywords ***
+CreateScalarTestData
+    [Arguments]    ${SuiteNM}    ${TestNM}
+    Comment    ${testDataFilename_ENG}
+    SetupTestDataFile    ${testDataFilename}
+    GetTestcaseData    ${SuiteNM}    ${TestNM}
+    Comment    ${TestNM}
+
+GetSuiteNM
+    @{SuiteName}    Split String    ${SUITE_NAME}    .
+    ${ListLength}    Get Length    ${SuiteName}
+    ${Index}    Evaluate    ${ListLength}-1
+    Set Suite Variable    ${SuiteNM}    @{SuiteName}[${Index}]
+
+SetupTestDataFile
+    [Arguments]    ${Filename}
+    Log    ${Filename}
+    Open Excel    ${Filename}    formatting_info=True
+    Comment    Log    formatting_info=True
+
+GetTestcaseData
+    [Arguments]    ${sheetname}    ${testcasename}
+    ${rcount}=    Get Row Count    ${sheetname}
+    : FOR    ${row}    IN RANGE    1    ${rcount}
+    \    ${stname}=    ExcelLibrary.Read Cell Data By Coordinates    ${sheetname}    0    ${row}
+    \    Run Keyword If    '${stname}'=='${testcasename}'    CreateScalar    ${row}    ${sheetname}
+    \    Run Keyword If    '${stname}'=='${testcasename}'    Exit For Loop
+
+CreateScalar
+    [Arguments]    ${RowNo}    ${SheetName}
+    Log    row number is ${RowNo}
+    ${ColCount}=    Get Column Count    ${SheetName}
+    : FOR    ${Column}    IN RANGE    0    ${ColCount}
+    \    ${ScalarName}=    Read Cell Data By Coordinates    ${SheetName}    ${Column}    0
+    \    ${ScalarValue}=    Read Cell Data By Coordinates    ${SheetName}    ${Column}    ${RowNo}
+    \    Set Suite Variable    ${${ScalarName}}    ${ScalarValue}
+
+Setup
+    # All the Web Elements are captured and stored in an excel file
+    Set Suite Variable    ${ScreenshotCounter}    1
+    Set Suite Variable    ${Delimiter_Tilde}    ~
+    Comment    Set Suite Variable    ${strLang}    ENG
+    ${strLang}    Set Variable    ENG
+    Run Keyword If    '${strLang}'=='ENG'    Set Locator and Testdata File to ENG
+    Run Keyword If    '${strLang}'=='OTHER'    Set Locator and Testdata File to OTHER
+    Comment    ${LocatorSetupFilename}
+    SetupTestDataFile    ${LocatorSetupFilename}
+    @{Sheets}=    Get Sheet Names
+    : FOR    ${Sheet}    IN    @{Sheets}
+    \    GetTestcaseData    ${Sheet}    Element_Locators
+
+Set Locator and Testdata File to ENG
+    Set Suite Variable    ${LocatorSetupFilename}    ${LocatorSetupFilename_ENG}
+    Set Suite Variable    ${testDataFilename}    ${testDataFilename_ENG}
+
+Set Locator and Testdata File to OTHER
+    Set Suite Variable    ${LocatorSetupFilename}    ${LocatorSetupFilename_OTHER}
+    Set Suite Variable    ${testDataFilename}    ${testDataFilename_OTHER}
